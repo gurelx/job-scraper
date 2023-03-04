@@ -8,7 +8,7 @@ I have used Node.js and [Puppeteer](https://pptr.dev) to open up the [Seneca Wor
 
 ## Author
 
-Me(Gurel Sezgin)
+Me (Gurel Sezgin)
 [@LinkedIn](https://www.linkedin.com/in/gurel-sezgin/)
 
 ## Version History
