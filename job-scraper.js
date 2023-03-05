@@ -1,5 +1,19 @@
+/* 
+   Job Scraper!
+   Author: Gurel Sezgin
+   ****************************************************
+   04/03/23 - Initial Release
+   05/03/23 - Sometimes not clicking a button bug fixed
+   ****************************************************
+   Examine README.md for details
+*/
+
+// Dependencies
 const puppeteer = require("puppeteer");
 const fs = require('fs');
+
+// Hard coded delay (sometimes even after network is idle a delay is needed)
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 (async () => {
     const jobs = []; // JSON array of jobs
@@ -14,14 +28,14 @@ const fs = require('fs');
 
     // Enter email
     await page.waitForSelector('#i0116');
-    await page.type('#i0116', '#####');
+    await page.type('#i0116', 'gurel-sezgin@myseneca.ca');
 
     // Next
     await page.click("#idSIButton9");
     await page.waitForNetworkIdle();
 
     // Enter password
-    await page.type('#i0118', "#####");
+    await page.type('#i0118', "A9YZ1h-*");
 
     // Next
     await page.waitForNetworkIdle();
@@ -29,11 +43,14 @@ const fs = require('fs');
 
     // If an extra page opens just press no
     await page.waitForNetworkIdle();
-    if (await page.$("#idBtn_Back") !== null)
-    await page.click("#idBtn_Back");
+    await delay(1000);
+    await page.evaluate(() => {
+        document.querySelector("#idBtn_Back").click();
+    });
 
     // Forward to jobs page
     await page.waitForNavigation();
+    await delay(1000);
     await page.goto("https://sw.senecacollege.ca/myAccount/co-op/coop-postings.htm");
 
     // Select jobs for my program
