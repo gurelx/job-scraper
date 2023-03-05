@@ -12,11 +12,12 @@ Me (Gurel Sezgin)
 [@LinkedIn](https://www.linkedin.com/in/gurel-sezgin/)
 
 ## Version History
-
-* 0.2
+* 0.3 (05/03/23)
+    * Sometimes not clicking a button bug fixed
+* 0.2 (04/03/23)
     * Added README
     * Hashed my credentials in login page for security reasons
-* 0.1
+* 0.1 (04/03/23)
     * Initial Release
 
 ## License
