@@ -28,14 +28,14 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     // Enter email
     await page.waitForSelector('#i0116');
-    await page.type('#i0116', 'gurel-sezgin@myseneca.ca');
+    await page.type('#i0116', '####');
 
     // Next
     await page.click("#idSIButton9");
     await page.waitForNetworkIdle();
 
     // Enter password
-    await page.type('#i0118', "A9YZ1h-*");
+    await page.type('#i0118', "####");
 
     // Next
     await page.waitForNetworkIdle();
