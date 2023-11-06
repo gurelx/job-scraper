@@ -1,0 +1,23 @@
+{
+  "name": "job-scraper",
+  "version": "1.0.0",
+  "description": "web scraper for job search in seneca works portal",
+  "main": "job-scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurelx/job-scraper.git"
+  },
+  "author": "Gurel Sezgin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurelx/job-scraper/issues"
+  },
+  "homepage": "https://github.com/gurelx/job-scraper#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "puppeteer": "^19.7.2"
+  }
+}
